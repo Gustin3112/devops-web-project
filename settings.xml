@@ -1,0 +1,35 @@
+<settings>
+
+<servers>
+  <server>
+    <id>gustin-devops-domain-gustin-packages</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+
+<profiles>
+  <profile>
+    <id>gustin-devops-domain-gustin-packages</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>gustin-devops-domain-gustin-packages</id>
+        <url>https://gustin-devops-domain-752507772757.d.codeartifact.ap-southeast-1.amazonaws.com/maven/gustin-packages/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+
+<mirrors>
+  <mirror>
+    <id>gustin-devops-domain-gustin-packages</id>
+    <name>gustin-devops-domain-gustin-packages</name>
+    <url>https://gustin-devops-domain-752507772757.d.codeartifact.ap-southeast-1.amazonaws.com/maven/gustin-packages/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+
+</settings>
